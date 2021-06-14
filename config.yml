@@ -1,0 +1,16 @@
+title: Riskabot
+description: Penggemar kpop
+template:
+  repo: riskabot-template
+  name: riskabot
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
